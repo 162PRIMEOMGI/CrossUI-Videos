@@ -39,7 +39,7 @@ xui.Class('App', 'xui.Module',{
                 .setLeft("11.666666666666666em")
                 .setTop("0.8333333333333334em")
                 .setWidth("53.333333333333336em")
-                .setHeight("35em")
+                .setHeight("35.04761904761905em")
                 .setAutoplay(true)
                 .onMediaEvent([
                     {
@@ -85,14 +85,12 @@ xui.Class('App', 'xui.Module',{
                         ]
                     }
                 ])
-                );
+            );
             
             host.xui_ui_dialog9.append(
                 xui.create("xui.UI.Gallery")
                 .setHost(host,"xui_ui_gallery7")
                 .setDirtyMark(false)
-                .setImgWidth('auto')
-                .setImgHeight('auto')
                 .setItems([
                     {
                         "id":"ad",
@@ -125,6 +123,8 @@ xui.Class('App', 'xui.Module',{
                 .setHeight("9em")
                 .setItemMargin(4)
                 .setItemPadding(4)
+                .setImgWidth("auto")
+                .setImgHeight("auto")
                 .setColumns(4)
                 .setValue("a")
                 .onItemSelected([
@@ -149,7 +149,28 @@ xui.Class('App', 'xui.Module',{
                         "overflow":"overflow-x:auto;overflow-y:hidden"
                     }
                 })
-                );
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput3")
+                .setDirtyMark(false)
+                .setLeft("2.2857142857142856em")
+                .setTop("35.80952380952381em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("Currency Input")
+                .setType("currency")
+            );
+            
+            append(
+                xui.create("xui.UI.Dialog")
+                .setHost(host,"xui_ui_dialog4")
+                .setLeft("11.428571428571429em")
+                .setTop("3.0476190476190474em")
+                .setCaption("Dialog")
+                .setMinBtn(false)
+            );
             
             return children;
             // ]]Code created by CrossUI RAD Studio
